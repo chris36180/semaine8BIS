@@ -269,8 +269,14 @@ section h3
 
 .portfolio img 
 {
-        max-width:100%;
+      max-width:100%;
         position: relative;
+        height:200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
     
 .portfolio .label 
