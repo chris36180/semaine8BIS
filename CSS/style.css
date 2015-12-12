@@ -1,5 +1,5 @@
 html,section {
-	background-image:url("../images/noir.JPG");
+	background-image:url("../images/noir.jpg");
     background-attachment:fixed;
     background-repeat:no-repeat;
     background-size:100%;
@@ -72,13 +72,13 @@ p{
 main
 {
 	color:#53BDFF;
-	background-image:url("../images/noir.JPG");
+	background-image:url("../images/noir.jpg");
 	background-attachment:fixed;
 	clear:both;
 }
 footer
 {
-	background-image:url("../images/noir.JPG");
+	background-image:url("../images/noir.jpg");
 	color:white;
 	padding:10px;
     width:100%;
