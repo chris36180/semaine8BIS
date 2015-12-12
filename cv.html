@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+		<title>Mon CV</title>
+			<link rel="stylesheet" href="CSS/style.css" type="text/css" /> <!--lien vers la feuille de style CSS-->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> <!--lien vers le CDN de Bootstrap-->
+			<link href="CSS/bootstrap.css" rel="stylesheet" >
+				<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+				<script type="text/javascript" src="js/jquery.easing.min.js"></script> <!--lien vers le fichier jquery pour l'effet "hover"-->
+				<script type="text/javascript" src="js/jquery.mixitup.min.js"></script> <!--lien vers fichier JQuery pour l'effet filtre-->
+				<script type="text/javascript">
+    $(function () {
+        
+        var filterList = {
+        
+            init: function () {
+            
+                // Plugin Mixitup, qui permet de filtrer les vignettes par catégorie
+                $('#portfoliolist').mixitup({
+                    targetSelector: '.portfolio',
+                    filterSelector: '.filter',
+                    effects: ['fade'],
+                    easing: 'snap',
+                    // call the hover effect
+                    onMixEnd: filterList.hoverEffect()
+                });             
+            
+            },
+            
+            hoverEffect: function () {
+            
+                // Fonction pour l'effet "hover"
+                $('#portfoliolist .portfolio').hover(
+                    function () {
+                        $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+                        $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');             
+                    },
+                    function () {
+                        $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+                        $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');                               
+                    }       
+                );              
+            
+            }
+        };
+        
+        // Lance les deux fonctions "hover" et "filtre"
+        filterList.init();
+        
+        
+    }); 
+				</script>
+</head>
+		<!--BODY--------------------------------------------------------------------------------------------------------------------------------------------------------------------------->    
+<body>
+	<header>
+			<div class="conteneur">
+					<div class="row">
+		<!-- image -------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+						<div class="col-md-4">
+							<img class="img-responsive img-rounded" src="images/Captur.PNG" alt="">
+						</div>
+							<!--texte-->	
+								<div class="col-md-8">
+			 	
+									<h1>GAVAUD Christophe</h1>
+									<h2>Recherche poste de Développeur Informatique</h2>
+									<p>Bonjour. Souhaitez-vous visiter mon cv GITHUB ?: <a href="http://resume.github.io/?chris36180" target="_blank">github36180</a> <br />
+Le site s'affichera dans une autre fenêtre.</p>
+								</div>	
+					</div>
+			</div>
+	</header>
+		<!--NAV BAR--------------------------------------------------------------------------------------------------------------------------------------------------------------------------->  
+		<div class="container-fluid">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Le C.V. de Christophe GAVAUD</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#menu1">Mon Parcours</a>
+                        </li>
+                        <li><a href="#menu2">Mes Ambitions</a>
+                        </li>
+                        <li><a href="#menu3">Mes expériences</a>
+                        </li>
+                        <li><a href="#menu4">Divers</a>
+                        </li>
+                        <li><a href="#menu5">Portfolio</a>
+                        </li>
+						<li><a href="#menu6">Contactez-moi</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </div>
+<main>  
+	
+       
+  <section class="jumbotron" id="menu1">  
+		<div class="container-fluid">
+			<div class="col-md-4">
+            	<h3 class="well">Avant SIMPLON</h3>
+					<ul>
+						<li>2014/2015:<strong>Titre professionnel TAI </strong> Anté formation à Joué-les-Tours</li>
+						<li>1998/2015:<strong>Menuisier-plaquiste</strong> INDRE</li>
+						<li>1996/1998:<strong>CAP/BEP Electrotechnique</strong> LEP Blaise-Pascal à Chateauroux</li>
+					</ul> 
+			</div>
+		</div>
+	</section>	
+	 <section class="jumbotron" id="menu2">
+		<div class="container-fluid">
+			<div class="col-md-4">
+            	<h3 class="well">MES AMBITIONS</h3>
+					<ul>
+					
+						<li>Trouver un poste de codeur ou de developpeur informatique </li>
+						<li>En faire mon metier </li>
+					</ul>
+			</div>
+		</div>
+	</section>
+				
+	<section class="jumbotron" id="menu3">  
+		<div class="container-fluid">
+			<div class="col-md-4">
+            	<h3 class="well">MES EXPERIENCES</h3>
+					<ul>
+					
+						<li>Stage support informatique particulier FLOTEC Chateauroux(36) : 2 semaines AVRIL 2015</li>
+						<li>Stage support informatique pro chez  MCI Carquefous (44) : 4 semaines MAI 2015</li>
+						<li>apprentissage en cours HTML5/CSS3 et autres 
+							language informatique CODEURS INDRIENS(36) </li>
+					</ul>		
+			</div>	
+		</div>
+	</section>
+	
+     <section class="jumbotron" id="menu4">  			
+		<div class="container-fluid">
+			<div class="col-md-4">
+				<h3 class="well">DIVERS</h3>
+					<ul>
+					
+						<li>PermisB (12points)</li>
+						<li>Langues:language informatique;anglais(parlé, écrit et compris);français>
+						<li>Passionné de vieilles mécaniques </li>
+					</ul>		
+			</div>	
+		</div>
+	</section>
+	
+	
+	 <section class="jumbotron" id="menu5">
+		<div class="container-fluid">  
+<!--PORTFOLIO----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->   
+				<h3 class="well">MON PORTFOLIO</h3>
+				
+            <!--triage portfolio par catégorie------------------------------------------------------------------------------------------------------------------------------->
+            <ul id="filters" class="clearfix row">
+                <li><span class="filter active" data-filter="cat7 cat1 cat2 cat3 cat4 cat5 cat6">Toutes mes catégories</span></li>
+                
+                 <li><span class="filter" data-filter="cat1">HTML/CSS</span></li>
+                 <li><span class="filter" data-filter="cat2">Javascript</span></li>
+                 <li><span class="filter" data-filter="cat3">Formation</span></li>
+                 <li><span class="filter" data-filter="cat4">Ruby</span></li>
+                 <li><span class="filter" data-filter="cat5">En cours</span></li>
+                 <li><span class="filter" data-filter="cat6">Loisirs</span></li>
+                 <li><span class="filter" data-filter="cat7">Profil</span></li>
+            </ul>
+			<!--La div qui contient les vignettes des projets---------------------------------------------------------------------------------------------------------------->
+            <div id="portfoliolist"> 
+                
+                 <div class="portfolio cat1" data-cat="cat1">
+                    <div class="portfolio-wrapper">         
+                        <img src="images/portfolios/app/2.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Page placement div</a>
+                                <span class="text-category">HTML/CSS</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div>                                                      
+                        
+
+                <div class="portfolio cat1" data-cat="cat1">
+                    <div class="portfolio-wrapper">         
+                        <img src="images/portfolios/app/1.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Projet HTML/CSS</a>
+                                <span class="text-category">HTML/CSS</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div>  
+				
+                            
+                <div class="portfolio cat2" data-cat="cat2">
+                    <div class="portfolio-wrapper">         
+                        <img src="images/portfolios/logo/1.png" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Projet en Javascript</a>
+                                <span class="text-category">Javascript</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div>       
+				
+				<div class="portfolio cat3" data-cat="cat3">
+                    <div class="portfolio-wrapper">         
+                        <img src="images/portfolios/icon/tai.png" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Certificats TAI</a>
+                                <span class="text-category">Certificats</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div> 
+                
+                
+                <div class="portfolio cat3" data-cat="cat3">
+                    <div class="portfolio-wrapper">         
+                        <img src="images/portfolios/icon/1.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Certificats Open Classroom</a>
+                                <span class="text-category">Certificats</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div> 
+				
+                <div class="portfolio cat4" data-cat="cat4">
+                    <div class="portfolio-wrapper">         
+                        <img src="images/portfolios/card/1.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">API Open Food Facts</a>
+                                <span class="text-category">Ruby</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div> 
+				
+                 <div class="portfolio cat4" data-cat="cat4">
+                    <div class="portfolio-wrapper">         
+                        <img src="images/portfolios/card/2.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Exercice en Ruby</a>
+                                <span class="text-category">Ruby</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div>   
+				
+                 <div class="portfolio cat4" data-cat="cat4">
+                    <div class="portfolio-wrapper">         
+                        <img src="images/portfolios/card/3.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Cours suivis Ruby</a>
+                                <span class="text-category">Ruby</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div>                                                                   
+                
+                <div class="portfolio cat5" data-cat="cat5">
+                    <div class="portfolio-wrapper">         
+                        <img src="images/portfolios/icon/2.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Apprentissage</a>
+                                <span class="text-category">En cours!</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div>
+                
+               
+                
+                <div class="portfolio cat6" data-cat="cat6">
+                    <div class="portfolio-wrapper">         
+                        <img src="images/cox.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Vw coccinelle :-)</a>
+                                <span class="text-category">Loisirs</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div> 
+				
+				
+                <div class="portfolio cat7" data-cat="cat7">
+                    <div class="portfolio-wrapper">
+                        <img src="images/portfolios/app/3.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Page de profil</a>
+                                <span class="text-category">Profil</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div>          
+                
+
+                                                                                                                                                                   
+                
+     </section>           
+        
+  
+	<!--PIED DE PAGE----------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+ </main> 
+    
+ 
+    <footer>
+	    <section class="jumbotron" id="menu6">  			
+			<div class="container-fluid">
+				<div class="col-md-12>
+					<div class="row ">
+						<h3 class="well">CONTACTEZ MOI</h3>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2721.675473293847!2d1.4167657156724085!3d46.987708479148345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fb64de93b0de3f%3A0x2839ba8cf2c39ad9!2s8+Route+de+Valen%C3%A7ay%2C+36180+Pellevoisin!5e0!3m2!1sfr!2sfr!4v1448281945592" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				
+				
+									
+						
+									<label for="precisions"><p>Mes coordonnées:</p></label>
+										<span class="glyphicon glyphicon-earphone"> <strong>06.11.92.03.61</strong></span>
+											<a href="mailto:christophe.gavaud@gmail.com">christophe.gavaud@gmail.com</a>
+												<span class="glyphicon glyphicon-home"><strong> - 8 route de valencay 36180 PELLEVOISIN</strong></span>
+							
+					
+				
+													  <section class="jumbotron" id="menu5">
+														<div class="container-fluid">
+															<div class="row">
+																<div class="col-md-12 ">
+                                   
+																								<FORM METHOD=POST ENCTYPE="text/plain" ACTION="mailto:christophe.gavaud@gmail.com">
+																	 
+																								  <fieldset>
+																									   <legend>Vos coordonnées</legend> <!-- Titre du fieldset --> 
+																								
+																									   <label for="nom">Vos nom et prénom </label>
+																											<input type="text" name="nom" id="nom" placeholder="Ex :Dupont Jean" />
+																								 
+																									   <label for="email">Votre e-mail</label>
+																											<input type="email" name="email" id="email" placeholder="Ex :TOTO@aol.fr"/>
+																								
+																								   </fieldset>
+																								 
+																								   <fieldset>
+																									   <legend>Votre message</legend> <!-- Titre du fieldset -->
+																											
+																									   <p>
+																										   <label for="precisions">Veuillez me laisser votre message :</label>
+																										   <textarea name="precisions" id="precisions" cols="38" rows="4"></textarea>
+																									   </p>
+																								   </fieldset>
+																										<p>
+																										<input type="submit" value="Envoyer" />
+																										<input type="reset" value="Annuler" />
+																										</p>
+																								</FORM>
+
+																</div>
+															</div>        
+														</div>          
+					</div>
+				</div>   
+			</div>
+		 </section>       
+
+	</footer>
+		
+    
+</body>
+    
+</html>
