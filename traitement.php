@@ -25,8 +25,11 @@
         <![endif]-->
       
       
-    <?php 
-$nom = $_POST['nom']; 
- 
-print("<center>Bonjour $nom</center>"); 
-?>
+  <html> 
+<head> 
+    <title>Formulaire</title> 
+</head> 
+<body> 
+<p>Bonjour <?php echo $_POST['nom'] ?></p> 
+</body> 
+</html>
