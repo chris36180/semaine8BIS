@@ -25,17 +25,8 @@
         <![endif]-->
       
       
-        <title>CV Interactif</title>
-       
-    </head>
-  <body>
-    <p>
-      <?php
-  echo 'Bonjour, ' . $_POST ['prenom'] . ' ' . $_POST['nom'] . ', votre commentaire : ' . $_POST['comment'] . ' a bien été enregistré.';
+    <?php 
+$nom = $_POST['nom']; 
  
+print("<center>Bonjour $nom</center>"); 
 ?>
-</p>
-  </body>  
-  
-  
-  </html>
