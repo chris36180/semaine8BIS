@@ -25,11 +25,10 @@
         <![endif]-->
       
       
-  <html> 
-<head> 
-    <title>Formulaire</title> 
-</head> 
-<body> 
-<p>Bonjour <?php echo $_POST['nom'] ?></p> 
-</body> 
-</html>
+<?php
+if(/*Un petit test pour savoir si le formulaire est envoyé*/){
+    echo '
+    <script type="text/javascript">
+    alert("formulaire envoyé");
+    </script>';
+}
