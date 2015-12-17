@@ -1,34 +1,26 @@
-<!DOCTYPE html>                  
-<html>
-    <head>        
-                        
-        <meta charset="utf-8"/>   
-        
-        <!--S'assure que EI est à jour-->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
-        <!--Rendu sans zoom sur les appareil mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <meta name="description" content="CV">
-        <meta name="author" content="Christophe GAVAUD">
-        
-        <!--link vers bootstrap-->
-        <link href="css/bootstrap.css" rel="stylesheet" >
-        
-        
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-      
-      
 <?php
-if(/*Un petit test pour savoir si le formulaire est envoyé*/){
-    echo '
-    <script type="text/javascript">
-    alert("formulaire envoyé");
-    </script>';
-}
+// check if fields passed are empty
+if(empty($_POST['name'])  		||
+   empty($_POST['phone']) 		||
+   empty($_POST['email']) 		||
+   empty($_POST['message'])	||
+   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+   {
+	echo "No arguments Provided!";
+	return false;
+   }
+	
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$email_address = $_POST['email'];
+$message = $_POST['message'];
+	
+// create email body and send it	
+$to = 'christophe.gavaud@gmail.com'; // PUT YOUR EMAIL ADDRESS HERE
+$email_subject = "chris36180 Contact Form:  $name"; // EDIT THE EMAIL SUBJECT LINE HERE
+$email_body = "You have received a new message from your website's contact form.\n\n"."Here are the details:\n\nName: $name\n\nPhone: $phone\n\nEmail: $email_address\n\nMessage:\n$message";
+$headers = "From: noreply@your-domain.com\n";
+$headers .= "Reply-To: $email_address";	
+mail($to,$email_subject,$email_body,$headers);
+return true;			
+?>
